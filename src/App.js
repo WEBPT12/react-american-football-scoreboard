@@ -6,6 +6,23 @@ import BottomRow from "./BottomRow";
 function App() {
   //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
 
+// 1. Hold each team's current score in a state value
+  // LionsScorepoints is one slice of state and current value is 32
+  const [LionsScorepoints, setLionsScorepoints] = useState(20);
+  const LionsTouchdown= e => {
+    setLionsScorepoints(LionsScorepoints + 7)
+  }
+  const LionsFieldgoal= e => {
+    setLionsScorepoints(LionsScorepoints + 3)
+  }
+  const [TigersScorepoints, setTigersScorepoints] = useState(20);
+  const TigersTouchdown = e => {
+    setTigersScorepoints(TigersScorepoints + 7)
+  }
+  const TigersFieldgoal= e => {
+    setTigersScorepoints(TigersScorepoints + 3)
+  }
+
   return (
     <div className="container">
       <section className="scoreboard">
